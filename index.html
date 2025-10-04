@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Invoice Generator</h2>
+    <div id="input-section">
+        <input type="text" id="itemName" placeholder="Item Name">
+        <input type="number" id="quantity" placeholder="Quantity" min="1">
+        <input type="number" id="price" placeholder="Price per Unit" min="1" >
+        <input type="number" id="discount" placeholder="Discount % (optional)" min="0" max="100">
+        <button onclick="addItem()">Add Item</button>
+        <button onclick="resetInvoice()">Reset</button>
+    </div>
+
+ 
+    <table id="invoiceTable">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Discount %</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div class="totals">
+        <p>Subtotal: <span id="subtotal">0</span></p>
+        <p>Total Discount: <span id="totalDiscount">0</span></p>
+        <p>Tax (10%): <span id="tax">0</span></p>
+        <h3>Grand Total: <span id="grandTotal">0</span></h3>
+    </div>
+    <script src="script.js"></script>
+  
+</body>
+
+</html>
